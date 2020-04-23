@@ -1,0 +1,14 @@
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 15px;
+}
+.colorTableContent{
+    height: 15px;
+    width: 15px;
+    display: inline-block;
+    margin-right: 5px;
+    border-radius: 50%;
+}
