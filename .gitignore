@@ -1,8 +1,4 @@
 node_modules
-package-lock.json
-package-lock
-yarn-lock.json
-yarn-lock
 logs/*.log
 /.vagrant
 .webpack-cache
@@ -19,3 +15,6 @@ tmp
 bundle-stats.json
 .vscode
 .idea
+package-lock.json
+package-lock
+yarn.lock
