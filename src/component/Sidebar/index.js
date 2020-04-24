@@ -54,7 +54,10 @@ export default function Sidebar(props) {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
-    setValue(newValue);
+    /** Predefined handle change */
+    // setValue(newValue);
+    
+    /** Custom changes */
     props.changeCurrentTab(newValue, ()=>{
       if(newValue !== EXCLUSIVE_VALUE && newValue !== SEE_ALL_VALUE){
         /* Scroll to specific category */
@@ -70,7 +73,7 @@ export default function Sidebar(props) {
       <AppBar position="static" color="default">
         <Tabs
           orientation="vertical"
-          value={value}
+          value={props.currentTab}
           onChange={handleChange}
           variant="scrollable"
           scrollButtons="on"
@@ -80,6 +83,7 @@ export default function Sidebar(props) {
         >
           {props.productsData.map((item)=>{
             return <Tab 
+              key={item.category}
               label={<span className="restaurants-label">{item.restaurantList.length + " Restaurants"}</span>} 
               icon={<span className="category-name" >{item.category.toUpperCase()}</span>} 
               value={item.category}

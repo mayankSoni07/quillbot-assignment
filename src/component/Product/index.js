@@ -18,7 +18,7 @@ export default function Product(props){
                             <div className="product-item-rate flex-value">
                                 {/* Render rating in Red/Green according to condition */}
                                 <span className={parseFloat(item.ratings) >= 4 ? "star-tag green-tag" : "star-tag red-tag" } >
-                                    <img className="star-img" src={require('./Star.png')}></img>
+                                    <img alt="star-img" className="star-img" src={require('./Star.png')}></img>
                                     {item.ratings}
                                 </span>
                             </div>
