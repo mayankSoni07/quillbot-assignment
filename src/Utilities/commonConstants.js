@@ -1,3 +1,5 @@
+export const EXCLUSIVE_VALUE = "Exclusive";
+export const SEE_ALL_VALUE = "SeeAll"
 export const IMAGES_DATA = [
   "https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&fit=crop&w=500&q=60",
   "https://images.unsplash.com/photo-1521305916504-4a1121188589?auto=format&fit=crop&w=500&q=60",

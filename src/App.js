@@ -3,7 +3,7 @@ import {
   BrowserRouter as Router, Switch, Route
 } from "react-router-dom";
 
-import Home from "./Home";
+import Home from "./container/Home";
 
 class App extends React.Component {
   render(){
