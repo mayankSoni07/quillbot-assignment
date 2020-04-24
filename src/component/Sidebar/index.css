@@ -1,0 +1,27 @@
+.makeStyles-root-1{
+    width: 250px !important;
+    position: fixed;
+}
+.category-name{
+    font-size: 15px;
+    font-weight: 600;
+}
+.restaurants-label{
+    font-size: 11px;
+}
+.MuiTab-textColorPrimary.Mui-selected{
+    color: #fff !important;
+    background-color: #db7c38 !important;
+}
+.PrivateTabIndicator-colorPrimary-68{
+    background-color: transparent !important;
+}
+.PrivateTabScrollButton-vertical-53{
+    height: 0px !important;
+}
+.MuiTab-textColorPrimary{
+    box-shadow: 0 4px 7px 0 rgba(218,220,230,.6);
+}
+.PrivateTabIndicator-colorPrimary-78{
+    background-color: transparent !important;
+}
