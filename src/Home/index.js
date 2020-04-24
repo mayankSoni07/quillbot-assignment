@@ -26,19 +26,22 @@ class Home extends React.Component {
                                     <div className="product-item-food-type">{item.food_types.join(", ")}</div>
                                     <div className="product-item-triplet">
                                         <div className="product-item-rate flex-value">
-                                            <span className={"star-tag" + " green-tag"} >4.1</span>
+                                            <span className={parseFloat(item.ratings) >= 4 ? "star-tag green-tag" : "star-tag red-tag" } >
+                                                <img className="star-img" src={require('./Star.png')}></img>
+                                                {item.ratings}
+                                            </span>
                                         </div>
                                         <div className="">.</div>
                                         <div className="flex-gap"></div>
-                                        <div className="product-item-price flex-value">51 min</div>
+                                        <div className="product-item-price flex-value">{item.delivery_time}</div>
                                         <div className="flex-gap"></div>
                                         <div className="">.</div>
                                         <div className="flex-gap"></div>
-                                        <div className="product-item-description flex-value">2300 for</div>
+                                        <div className="product-item-description flex-value">{item.price_for_two} for Two</div>
                                     </div>
                                 </div>
                                 <div className={"overlay"}>
-                                    <span onClick={() => console.log('hello world')}>QUICK VIEW</span>
+                                    <div>QUICK VIEW</div>
                                 </div>
                             </div>
                     </div>
