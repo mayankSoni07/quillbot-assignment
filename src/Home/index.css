@@ -19,6 +19,7 @@
     margin: 0 4px;
     display: inline-flex;
     margin-bottom: 10px;
+    height: 410px;
 }
 .bg-white{
     position: relative;
@@ -35,7 +36,9 @@
 }
 .bg-white:hover .overlay,.overlay-active{
     display: block;
-    margin-top: 20px;
+    position: absolute;
+    bottom: 5%;
+    width: 82%;
 }
 .overlay div,.overlay-active div{
     font-size: 11px;
@@ -75,30 +78,31 @@
     margin-top: 18px;
     display: flex;
     color: #535665;
-    font-size: 11px;
+    font-size: 10px;
+    text-transform: uppercase;
 }
 .flex-value{
-    flex: 0.20;
+    flex: 0.15;
 }
 .flex-gap{
-    flex: 0.10
+    flex: 0.07;
 }
 .product-item-rate{
     flex: 0.30;
 }
 .product-item-price{
-    
+    flex: 0.25;
 }
 .product-item-description{
-    flex: 0.35;
+    flex: 0.50;
 }
 .star-tag{
     padding: 5px;
     color: #fff;
 }
 .star-img{
-    height: 12px;
-    width: 12px;
+    height: 11px;
+    width: 11px;
     margin-right: 3px;
 }
 .red-tag{
@@ -106,4 +110,21 @@
 }
 .green-tag{
     background-color: #48c479;
+}
+
+.show-more{
+    width: calc(20% - 30px);
+    margin: 20px 4px;
+    display: inline-flex;
+    height: 190px;
+    border: 3px solid #db7c38;
+    position: absolute;
+    cursor: pointer;
+}
+.show-more span{
+    color: #db7c38;
+    position: absolute;
+    bottom: 45%;
+    right: 35%;
+    font-weight: 600;
 }
