@@ -1,6 +1,9 @@
 body{
     font-family: Arial;
 }
+.sidebar-wrap{
+    margin-left: 25px;
+}
 .product-container-full{
     width: 820px;
     /* margin: auto; */
