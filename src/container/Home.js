@@ -123,27 +123,38 @@ class Home extends React.Component {
         const { productsData, exclusiveProducts, seeAllProducts, currentTab } = this.state;
         return (
             <React.Fragment>
+
                 {/* Render Sidebar */}
-                <Sidebar 
-                    currentTab={currentTab}
-                    productsData={productsData} 
-                    changeCurrentTab={this.changeCurrentTab} 
-                    exclusiveRestaurantsLength={exclusiveProducts.length}
-                    allProductsRestaurantsLength={seeAllProducts.length}
-                />
-                {/* Render products */}
-                {productsData.map((product)=>{
+                <div className="sidebar-wrap">
+                    <Sidebar 
+                        currentTab={currentTab}
+                        productsData={productsData} 
+                        changeCurrentTab={this.changeCurrentTab} 
+                        exclusiveRestaurantsLength={exclusiveProducts.length}
+                        allProductsRestaurantsLength={seeAllProducts.length}
+                    />
+                </div>
+
+                {/* Render products (Not for Exclusive and SeeAll) */}
+                {(currentTab !== EXCLUSIVE_VALUE && currentTab !== SEE_ALL_VALUE) && 
+                    productsData.map((product)=>{
                     return <div id="parent-container" className="product-container-full">
-                        {/* Category Name (Not for Exclusive and See all) */}
-                        {(currentTab !== EXCLUSIVE_VALUE && currentTab !== SEE_ALL_VALUE) && 
-                            <div id={product.category} className="category-label">
-                                {product.category.toUpperCase()}
-                            </div>
-                        }
+                        {/* Render Category Name */}
+                        <div id={product.category} className="category-label">
+                            {product.category.toUpperCase()}
+                        </div>
                         {/* Render Products */}
                         {this.renderProducts(product)}
                     </div>
                 })}
+
+                {/* Render products (For Exclusive and SeeAll) */}
+                {(currentTab === EXCLUSIVE_VALUE || currentTab === SEE_ALL_VALUE) && 
+                    <div id="parent-container" className="product-container-full">
+                        {this.renderProducts()}
+                    </div>
+                }
+
             </React.Fragment>
         );
     }
